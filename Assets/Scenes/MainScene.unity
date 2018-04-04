@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 1671537087}
-  offset: {x: 2, y: 2}
+  offset: {x: -2, y: 2}
 --- !u!1001 &1266491197
 Prefab:
   m_ObjectHideFlags: 0
@@ -627,3 +627,4 @@ MonoBehaviour:
   orbitProgress: 0
   orbitPeriod: 12
   orbitActive: 1
+  direction: 1
