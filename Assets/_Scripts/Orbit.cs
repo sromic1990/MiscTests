@@ -11,6 +11,7 @@ public class Orbit : MonoBehaviour
     public float orbitProgress = 0.0f;
     public float orbitPeriod = 3f;
     public bool orbitActive = true;
+    public int direction = 1;
 
 	// Use this for initialization
 	void Start () 
@@ -27,7 +28,8 @@ public class Orbit : MonoBehaviour
 
     private IEnumerator AnimateOrbit()
     {
-        orbitPeriod = orbitPeriod < 0.1f ? 0.1f : orbitPeriod;
+        orbitPeriod = Mathf.Abs(orbitPeriod) < 0.1f ? 0.1f : orbitPeriod;
+        orbitPeriod *= direction;
 
         float orbitSpeed = 1f / orbitPeriod;
 
